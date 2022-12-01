@@ -1,0 +1,135 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$grey: #e8e8e8
+$gray: #ededed
+
+
+$font-suisse-reg: 'SuisseIntl-Regular', sans-serif
+$font-suisse-med: 'SuisseIntl-Medium', sans-serif // 500
+$font-suisse-semb: 'SuisseIntl-SemiBold', sans-serif // 600
+$font-wulkan: 'WulkanDisplay-SemiBoldItalic', sans-serif
+
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  //overscroll-behavior: none
+  background: $blue
+  img
+    max-width: 100%
+    height: auto
+
+.bonus
+  overflow: hidden
+  padding: 56px 0 0 0
+  &__container
+    max-width: 1500px
+    padding: 0 95px 0 15px
+    margin: 0 auto
+  &__row
+    display: flex
+    align-items: flex-end
+  &__title
+    font-family: $font-suisse-semb
+    font-size: 76px
+    line-height: 92px
+    color: #ffffff
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    max-width: 610px
+    margin: 0 0 60px 0
+    span
+      color: $magenta
+      font-family: $font-wulkan
+  &__info
+    display: flex
+    flex-wrap: wrap
+    max-width: 680px
+    &-one,
+    &-two,
+    &-three
+      &-top
+        display: flex
+        margin: 0 0 15px 0
+        .back
+          display: inline-block
+          font-family: $font-suisse-med
+          font-size: 46px
+          line-height: 46px
+          color: $gray
+          padding: 14px 13px 12px
+          background: $magenta
+        .border
+          display: inline-block
+          font-family: $font-wulkan
+          padding: 24px 16px 22px
+          font-size: 26px
+          line-height: 26px
+          color: $magenta
+          border: 1px solid $magenta
+      &-bottom
+        font-family: $font-suisse-semb
+        font-size: 18px
+        line-height: 21px
+        color: $gray
+        text-transform: uppercase
+    &-one
+      margin: 0 50px 45px 0
+    &-two
+      margin: 0 0 45px 0
+      &-top
+        .back
+          border: 1px solid $magenta
+  &__image
+    max-width: 470px
+    position: relative
+    z-index: 1
+    picture
+      position: relative
+      z-index: 1
+    &-back
+      background: url('../img/back-desc.jpg') no-repeat 50% 0/cover
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
+        background: url('../img/back-desc.jpg') no-repeat 50% 0/cover
+      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        background: url('../img/back-desc.jpg') no-repeat 50% 0/cover
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background: url("../img/back-mob.jpg") no-repeat 50% 0/cover
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/back-mob.jpg") no-repeat 50% 0/cover
+      width: 670px
+      height: 374px
+      position: absolute
+      bottom: 54px
+      left: 36px
+      z-index: 0
+    &-min
+      background: url('../img/back-min.png') no-repeat 50% 0/contain
+      width: 179px
+      height: 135px
+      position: absolute
+      z-index: 3
+      top: -60px
+      left: 120px
+    &-text
+      position: absolute
+      z-index: 4
+      bottom: 17px
+      right: -66px
+      br
+        display: none
+      font-family: $font-suisse-reg
+      font-size: 11px
+      line-height: 14px
+      color: #FFFFFF
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+
+
+
+
+
+
+
+
