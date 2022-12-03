@@ -38,6 +38,8 @@ body
   img
     max-width: 100%
     height: auto
+  &.overflow
+    overflow: hidden
 
 .wrapper
   overflow: hidden
@@ -139,9 +141,9 @@ body
     @include breakpoint(1305px)
       margin: 0 30px 0 0
     @include breakpoint(1260px)
-      flex: 1 1 auto
+      margin: 0 auto 0 0
     @include breakpoint(600px)
-      margin: 0
+      margin: 0 auto 0 0
     img
       @include breakpoint(600px)
         transform: scale(1.2)
